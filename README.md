@@ -93,3 +93,63 @@ Two synthetic Excel workbooks are included:
 ```text
 demo/NAV_Pack_Previous.xlsx
 demo/NAV_Pack_Updated.xlsx
+
+Upload the two synthetic demo files into FundDiff and click **Compare workbooks**.
+
+The demo files contain synthetic data created solely to demonstrate the application.
+
+## Privacy
+
+Workbook parsing and comparison happen locally in the browser. The current MVP does not send workbook contents to an application server for reconciliation.
+
+## Stack
+
+- Next.js 16
+- React
+- TypeScript
+- Tailwind CSS
+- SheetJS
+- Lucide React
+
+No backend or database is required for the current MVP.
+
+## Run locally
+
+    npm install && npm run dev
+
+Then open `http://localhost:3000`.
+
+For the demo, upload:
+
+    demo/NAV_Pack_Previous.xlsx
+    demo/NAV_Pack_Updated.xlsx
+
+## Production build
+
+    npm run build
+
+## Current scope
+
+FundDiff is a hackathon MVP, not a production accounting system.
+
+The current semantic layer uses deterministic rules for supported workbook sections including Portfolio, Income, Expenses, and Distributions.
+
+For example, an increase in portfolio fair value is treated as a positive NAV driver, while increases in expenses and distributions are treated as negative drivers.
+
+These rules are intentionally deterministic and auditable. A production version would add configurable accounting mappings, workbook-schema detection, formula lineage, validation controls, and support for different administrator templates.
+
+## Design principles
+
+**Deterministic first:** financial arithmetic is calculated from workbook data rather than generated text.
+
+**Traceable:** every identified driver retains its worksheet and source-cell reference.
+
+**Human-readable:** reviewers see business context rather than only Excel coordinates.
+
+**Private by default:** workbook analysis happens locally in the browser.
+
+## Built at
+
+**Rebuild Private Markets: Ylookup × Encode AI Hackathon**  
+Encode Hub, Shoreditch  
+5-6 September 2026
