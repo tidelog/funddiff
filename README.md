@@ -153,3 +153,21 @@ These rules are intentionally deterministic and auditable. A production version 
 **Rebuild Private Markets: Ylookup × Encode AI Hackathon**  
 Encode Hub, Shoreditch  
 5-6 September 2026
+
+## Problem evidence
+
+FundDiff was built around a problem described in **Call 1: NAV workflow review with a fund manager** from the hackathon anonymised interview dataset.
+
+The fund manager described receiving NAV work from their administrator that required **six or seven iterations** before it was correct. The problem was not primarily the turnaround time of each revision. It was the repeated review loop.
+
+The interview highlighted three connected problems:
+
+- **Repeated iterations:** NAV and reporting outputs routinely require multiple review-and-correction cycles.
+- **Missing quality control:** numbers are not consistently checked to ensure that related figures reconcile.
+- **Low trust:** because outputs cannot be assumed to be correct, the fund manager has to review the numbers themselves before reporting to investors.
+
+The fund manager described this missing reconciliation layer as a quality-control gap that creates the review burden. They also explained that the count of review turns, rather than the turnaround time of an individual turn, is what consumes their time.
+
+FundDiff targets that review loop. Instead of manually inspecting another workbook revision, a fund manager can compare the previous and updated versions, see the financial drivers behind the reported NAV movement, identify any unexplained difference, and trace each result back to its source cell.
+
+**Source:** Hackathon dataset, Call 1, *NAV workflow review with a fund manager* (anonymised transcript).
