@@ -20,6 +20,12 @@ Every explanation remains linked to the original workbook cell for traceability.
 
 ---
 
+
+## Demo video
+
+[Watch the 3:12 FundDiff demo](demo/funddiff-demo.mp4)
+
+
 ## The problem
 
 Fund operations frequently involve financial data moving between spreadsheets, administrators, managers, and reporting processes.
